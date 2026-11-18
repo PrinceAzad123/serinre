@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sereni-Tea — Premium artisan teas with AI-powered recommendations and online ordering.">
+  <title>Sereni-Tea | Premium Tea Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ───────── Navbar ───────── -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="navbar__container">
+      <a href="#" class="logo" aria-label="Sereni-Tea home">
+        <span class="logo__icon" aria-hidden="true">🍵</span>
+        <span class="logo__text">Sereni-Tea</span>
+      </a>
+
+      <ul class="navbar__links" id="navLinks" role="menubar">
+        <li role="none"><a href="#home" role="menuitem">Home</a></li>
+        <li role="none"><a href="#menu" role="menuitem">Menu</a></li>
+        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <button class="icon-btn" data-action="toggle-cart" aria-label="Open cart">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="icon-btn__badge" id="cartCount" aria-live="polite">0</span>
+        </button>
+        <button class="icon-btn" data-action="toggle-ai" aria-label="Open AI assistant">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <span class="icon-btn__pulse" aria-hidden="true"></span>
+        </button>
+        <button class="icon-btn navbar__mobile-toggle" data-action="toggle-mobile-menu" aria-label="Toggle menu" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ───────── Hero ───────── -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <span class="hero__leaf hero__leaf--1">🌿</span>
+      <span class="hero__leaf hero__leaf--2">🍃</span>
+      <span class="hero__leaf hero__leaf--3">🌿</span>
+      <span class="hero__steam hero__steam--1"></span>
+      <span class="hero__steam hero__steam--2"></span>
+      <span class="hero__steam hero__steam--3"></span>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__tag">✦ Premium Artisan Teas ✦</p>
+      <h1 class="hero__title">Discover Your <br><em class="hero__accent">Perfect Cup</em></h1>
+      <p class="hero__subtitle">
+        Hand-picked leaves from the world's finest gardens, brewed to perfection.
+        Let our AI tea sommelier guide your journey.
+      </p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Explore Menu</a>
+        <button class="btn btn--secondary" data-action="toggle-ai">
+          <span class="material-symbols-outlined">smart_toy</span>
+          Ask AI Sommelier
+        </button>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__value">50+</span>
+          <span class="stat__label">Tea Varieties</span>
+        </div>
+        <span class="stat__divider" aria-hidden="true"></span>
+        <div class="stat">
+          <span class="stat__value">12</span>
+          <span class="stat__label">Countries</span>
+        </div>
+        <span class="stat__divider" aria-hidden="true"></span>
+        <div class="stat">
+          <span class="stat__value">10k+</span>
+          <span class="stat__label">Happy Sips</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__cup" aria-hidden="true">🍵</div>
+  </section>
+
+  <!-- ───────── Features ───────── -->
+  <section class="features">
+    <div class="container">
+      <div class="features__grid">
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">🌱</span>
+          <h3 class="feature__title">100% Organic</h3>
+          <p class="feature__desc">Sustainably sourced from certified organic tea gardens worldwide.</p>
+        </article>
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">🤖</span>
+          <h3 class="feature__title">AI Recommendations</h3>
+          <p class="feature__desc">Our AI sommelier learns your taste and suggests the perfect blend.</p>
+        </article>
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">🚀</span>
+          <h3 class="feature__title">Express Delivery</h3>
+          <p class="feature__desc">Fresh tea delivered to your doorstep within 30 minutes.</p>
+        </article>
+        <article class="feature">
+          <span class="feature__icon" aria-hidden="true">🏆</span>
+          <h3 class="feature__title">Award Winning</h3>
+          <p class="feature__desc">Recognized by the International Tea Masters Association.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Menu ───────── -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-header__tag">Our Collection</p>
+        <h2 class="section-header__title">Curated Tea Menu</h2>
+        <p class="section-header__desc">Each cup tells a story — from misty mountain gardens to sun-drenched valleys</p>
+      </header>
+
+      <nav class="menu__filters" aria-label="Filter teas by category">
+        <button class="filter-btn is-active" data-filter="all">All Teas</button>
+        <button class="filter-btn" data-filter="green">Green Tea</button>
+        <button class="filter-btn" data-filter="black">Black Tea</button>
+        <button class="filter-btn" data-filter="herbal">Herbal</button>
+        <button class="filter-btn" data-filter="oolong">Oolong</button>
+        <button class="filter-btn" data-filter="specialty">Specialty</button>
+      </nav>
+
+      <div class="menu__grid" id="menuGrid" role="list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── About ───────── -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visuals">
+          <div class="about__card">🏔️<small>Darjeeling Gardens</small></div>
+          <div class="about__card">🧑‍🌾<small>Hand Picked</small></div>
+          <div class="about__card">🫖<small>Brewed Fresh</small></div>
+        </div>
+        <div class="about__content">
+          <p class="section-header__tag">Our Story</p>
+          <h2 class="section-header__title">From Leaf to Cup,<br>With Love</h2>
+          <p>Founded in 2020, Sereni-Tea was born from a simple belief: everyone deserves a perfect cup of tea. We travel the world to find the finest leaves, working directly with small-scale farmers who share our passion for quality.</p>
+          <p>Our AI-powered platform learns your preferences over time, creating a personalized tea journey that evolves with your palate. Whether you're a seasoned connoisseur or just starting your tea adventure, we're here to guide you.</p>
+          <ul class="about__highlights">
+            <li><span class="material-symbols-outlined">eco</span> Ethically Sourced</li>
+            <li><span class="material-symbols-outlined">local_shipping</span> Free Shipping \$50+</li>
+            <li><span class="material-symbols-outlined">verified</span> Quality Guaranteed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Testimonials ───────── -->
+  <section class="testimonials">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-header__tag">What People Say</p>
+        <h2 class="section-header__title">Loved by Tea Enthusiasts</h2>
+      </header>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial__text">"The AI recommended a Jasmine Dragon Pearl and it was absolutely divine. It's like having a personal tea master!"</p>
+          <footer class="testimonial__author">
+            <span class="testimonial__avatar">SP</span>
+            <div>
+              <strong>Sophia Patel</strong>
+              <span>Tea Enthusiast</span>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial__text">"Best matcha I've ever tasted. The ordering process is seamless and delivery is incredibly fast."</p>
+          <footer class="testimonial__author">
+            <span class="testimonial__avatar">JK</span>
+            <div>
+              <strong>James Kim</strong>
+              <span>Daily Sipper</span>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial__text">"I ordered a sampler pack based on the AI's suggestions and every single one was perfect for my taste!"</p>
+          <footer class="testimonial__author">
+            <span class="testimonial__avatar">EA</span>
+            <div>
+              <strong>Emma Anderson</strong>
+              <span>Subscriber</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Contact ───────── -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="section-header__tag">Get in Touch</p>
+          <h2 class="section-header__title">Visit Us or<br>Say Hello</h2>
+          <address class="contact__details">
+            <div class="contact__item">
+              <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+              <div>
+                <strong>Tea House</strong>
+                <p>42 Garden Lane, Darjeeling District<br>West Bengal, India 734101</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+              <div>
+                <strong>Open Hours</strong>
+                <p>Mon – Sat: 7:00 AM – 9:00 PM<br>Sunday: 8:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              <div>
+                <strong>Email</strong>
+                <p>hello@sereni-tea.com</p>
+              </div>
+            </div>
+          </address>
+        </div>
+        <div class="newsletter">
+          <h3 class="newsletter__title">Join the Tea Circle</h3>
+          <p>Subscribe for exclusive blends, early access to new arrivals, and AI-curated tea recommendations.</p>
+          <form class="newsletter__form" id="newsletterForm">
+            <label for="newsletterEmail" class="sr-only">Email address</label>
+            <input type="email" id="newsletterEmail" placeholder="your@email.com" required>
+            <button type="submit" class="btn btn--primary">Subscribe</button>
+          </form>
+          <p class="newsletter__note">🎁 Get 15% off your first order</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Footer ───────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="logo">
+            <span class="logo__icon" aria-hidden="true">🍵</span>
+            <span class="logo__text">Sereni-Tea</span>
+          </a>
+          <p>Bringing the world's finest teas to your cup, powered by AI.</p>
+        </div>
+        <nav class="footer__links" aria-label="Quick links">
+          <h4>Quick Links</h4>
+          <a href="#menu">Menu</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+          <a href="#">FAQ</a>
+        </nav>
+        <nav class="footer__links" aria-label="Tea types">
+          <h4>Tea Types</h4>
+          <a href="#">Green Tea</a>
+          <a href="#">Black Tea</a>
+          <a href="#">Herbal Tea</a>
+          <a href="#">Oolong Tea</a>
+        </nav>
+        <nav class="footer__links" aria-label="Support">
+          <h4>Support</h4>
+          <a href="#">Shipping Info</a>
+          <a href="#">Returns</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+      <p class="footer__copy">&copy; 2026 Sereni-Tea. All rights reserved. Brewed with ❤️</p>
+    </div>
+  </footer>
+
+  <!-- ───────── Overlay (shared by cart & AI) ───────── -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- ───────── Cart Sidebar ───────── -->
+  <aside class="sidebar sidebar--cart" id="cartSidebar" aria-label="Shopping cart">
+    <header class="sidebar__header">
+      <h3><span class="material-symbols-outlined">shopping_bag</span> Your Cart</h3>
+      <button class="icon-btn" data-action="close-cart" aria-label="Close cart">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </header>
+
+    <div class="cart__items" id="cartItems">
+      <div class="cart__empty" id="cartEmpty">
+        <span aria-hidden="true" style="font-size:3rem">🛒</span>
+        <p>Your cart is empty</p>
+        <small>Add some delicious teas!</small>
+      </div>
+    </div>
+
+    <footer class="cart__footer" id="cartFooter" hidden>
+      <div class="cart__total">
+        <span>Total</span>
+        <span id="cartTotal">\$0.00</span>
+      </div>
+      <button class="btn btn--primary btn--block" data-action="open-checkout">
+        <span class="material-symbols-outlined">shopping_cart_checkout</span>
+        Proceed to Checkout
+      </button>
+    </footer>
+  </aside>
+
+  <!-- ───────── AI Chat Sidebar ───────── -->
+  <aside class="sidebar sidebar--ai" id="aiSidebar" aria-label="AI Tea Sommelier">
+    <header class="sidebar__header sidebar__header--ai">
+      <h3><span class="material-symbols-outlined">smart_toy</span> AI Tea Sommelier</h3>
+      <button class="icon-btn" data-action="close-ai" aria-label="Close AI assistant">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </header>
+
+    <div class="ai__status">
+      <span class="ai__status-dot" aria-hidden="true"></span>
+      Online — Ready to help you find your perfect tea
+    </div>
+
+    <div class="ai__messages" id="aiMessages" role="log" aria-live="polite">
+      <div class="ai-msg ai-msg--bot">
+        <span class="ai-msg__avatar" aria-hidden="true">🤖</span>
+        <div class="ai-msg__bubble">
+          <p>Welcome to Sereni-Tea! 🍵 I'm your AI Tea Sommelier.</p>
+          <p>I can help you:</p>
+          <ul>
+            <li>Find the perfect tea for your mood</li>
+            <li>Get brewing recommendations</li>
+            <li>Place and customize orders</li>
+            <li>Learn about tea origins &amp; benefits</li>
+          </ul>
+          <p>What are you in the mood for today?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai__chips" id="aiChips">
+      <button class="chip" data-msg="Suggest a calming tea">🧘 Calming tea</button>
+      <button class="chip" data-msg="I need an energy boost">⚡ Energy boost</button>
+      <button class="chip" data-msg="What's your most popular tea?">🌟 Most popular</button>
+      <button class="chip" data-msg="Help me build a sampler">📦 Build sampler</button>
+    </div>
+
+    <form class="ai__form" id="aiForm">
+      <label for="aiInput" class="sr-only">Ask the AI sommelier</label>
+      <input type="text" id="aiInput" placeholder="Ask me anything about tea…" autocomplete="off">
+      <button type="submit" class="icon-btn icon-btn--send" aria-label="Send message">
+        <span class="material-symbols-outlined">send</span>
+      </button>
+    </form>
+  </aside>
+
+  <!-- ───────── Checkout Modal ───────── -->
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Checkout">
+    <div class="modal">
+      <header class="modal__header">
+        <h3>🍵 Checkout</h3>
+        <button class="icon-btn" data-action="close-checkout" aria-label="Close checkout">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </header>
+
+      <div class="modal__body">
+        <nav class="steps" aria-label="Checkout progress">
+          <div class="steps__item is-active" data-step="1"><span class="steps__num">1</span> Details</div>
+          <span class="steps__line" aria-hidden="true"></span>
+          <div class="steps__item" data-step="2"><span class="steps__num">2</span> Delivery</div>
+          <span class="steps__line" aria-hidden="true"></span>
+          <div class="steps__item" data-step="3"><span class="steps__num">3</span> Confirm</div>
+        </nav>
+
+        <!-- Step 1 -->
+        <fieldset class="step-pane is-active" id="step1">
+          <div class="form-field">
+            <label for="custName">Full Name</label>
+            <input type="text" id="custName" placeholder="John Doe" required>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="custEmail">Email</label>
+              <input type="email" id="custEmail" placeholder="john@example.com" required>
+            </div>
+            <div class="form-field">
+              <label for="custPhone">Phone</label>
+              <input type="tel" id="custPhone" placeholder="+1 234 567 890" required>
+            </div>
+          </div>
+          <button type="button" class="btn btn--primary btn--block" data-goto-step="2">Continue to Delivery</button>
+        </fieldset>
+
+        <!-- Step 2 -->
+        <fieldset class="step-pane" id="step2">
+          <div class="form-field">
+            <label for="custAddress">Delivery Address</label>
+            <textarea id="custAddress" placeholder="Enter your full address" rows="3" required></textarea>
+          </div>
+          <div class="form-field">
+            <label for="deliveryTime">Delivery Time</label>
+            <select id="deliveryTime">
+              <option>As soon as possible (30 min)</option>
+              <option>Schedule for later today</option>
+              <option>Schedule for tomorrow</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="specialInstructions">Special Instructions</label>
+            <textarea id="specialInstructions" placeholder="Any special requests?" rows="2"></textarea>
+          </div>
+          <div class="form-row">
+            <button type="button" class="btn btn--secondary" data-goto-step="1">Back</button>
+            <button type="button" class="btn btn--primary" data-goto-step="3">Review Order</button>
+          </div>
+        </fieldset>
+
+        <!-- Step 3 -->
+        <fieldset class="step-pane" id="step3">
+          <div class="order-summary" id="orderSummary"></div>
+          <div class="form-row">
+            <button type="button" class="btn btn--secondary" data-goto-step="2">Back</button>
+            <button type="button" class="btn btn--primary btn--success" data-action="place-order">
+              <span class="material-symbols-outlined">check_circle</span> Place Order
+            </button>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───────── Order Success Modal ───────── -->
+  <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-label="Order confirmation">
+    <div class="modal modal--success">
+      <div class="success">
+        <span class="success__icon" aria-hidden="true">✅</span>
+        <h2>Order Placed!</h2>
+        <p>Your tea is being prepared with love.</p>
+        <p class="success__order-id" id="orderId"></p>
+        <p>Estimated delivery: <strong>30 minutes</strong></p>
+        <button class="btn btn--primary" data-action="close-success">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───────── Toasts ───────── -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
